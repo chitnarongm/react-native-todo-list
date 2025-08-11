@@ -19,23 +19,13 @@ export default function RootLayout() {
   });
 
   if (!loaded) {
-    // Async font loading only occurs in development.
     return null;
   }
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <Stack>
-        <Stack.Screen name="index" options={{ title: "Home Screen" }} />
-        <Stack.Screen name="login" options={{ title: "Login" }} />
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen
-          name="product-detail/[id]"
-          options={{
-            title: "Product Detail",
-            headerBackButtonDisplayMode: "minimal",
-          }}
-        />
+        <Stack.Screen name="index" options={{ title: "To-do List" }} />
         <Stack.Screen name="+not-found" />
       </Stack>
 

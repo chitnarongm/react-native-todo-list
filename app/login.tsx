@@ -35,7 +35,6 @@ export default function Login() {
 
   return (
     <View style={styles.container}>
-      {/* Name */}
       <Controller
         control={control}
         name="name"
